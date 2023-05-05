@@ -4,7 +4,7 @@ from typing import List, Dict
 def get_unique_industries(path: str) -> List[str]:
     """Checks all different industries and returns a list of them
 
-    Must call `read`
+    Must call `read`: look at the function in the recorded class about pokemons
 
     Parameters
     ----------
