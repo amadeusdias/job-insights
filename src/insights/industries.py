@@ -21,6 +21,9 @@ def get_unique_industries(path: str) -> List[str]:
     # set_industry_types = set()
     # for industry in jobs:
     #     set_industry_types.add(industry["industry"])
+
+    # o if deve ler cada item no momento que ele é iterado,
+    # não ler a lista jobs de uma vez só, não fazer o if em cima de jobs.
     return {
         industry["industry"] for industry in jobs if industry["industry"] != ""
     }

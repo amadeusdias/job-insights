@@ -61,4 +61,10 @@ def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
     list
         List of jobs with provided job_type
     """
-    raise NotImplementedError
+    # o if deve ler cada item no momento que ele é iterado,
+    # não ler a lista jobs de uma vez só, não fazer o if em cima de jobs.
+    # types = []
+    # for typ in jobs:
+    #     if typ["job_type"] == job_type:
+    #         types.append(typ)
+    return [types for types in jobs if types["job_type"] == job_type]
