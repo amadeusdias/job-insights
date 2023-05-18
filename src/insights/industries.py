@@ -44,4 +44,4 @@ def filter_by_industry(jobs: List[Dict], industry: str) -> List[Dict]:
     list
         List of jobs with provided industry
     """
-    raise NotImplementedError
+    return [types for types in jobs if types["industry"] == industry]
