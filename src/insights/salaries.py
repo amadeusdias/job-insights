@@ -28,6 +28,9 @@ def get_max_salary(path: str) -> int:
     )
 
 
+# lembrar sempre de colocar parenteses nos metodos em pythin, p ativar eles
+
+
 def get_min_salary(path: str) -> int:
     """Get the minimum salary of all jobs
 
@@ -43,7 +46,15 @@ def get_min_salary(path: str) -> int:
     int
         The minimum salary paid out of all job opportunities
     """
-    raise NotImplementedError
+    jobs = read(path)
+    return min(
+        [
+            int(job["min_salary"])
+            for job in jobs
+            if job["min_salary"].isnumeric()
+            if job["min_salary"] != ""
+        ]
+    )
 
 
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
